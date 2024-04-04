@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exel Car Dealership Nakuru</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add the favicon link tag -->
+    <link rel="icon" href="Images/Flavicon.png" type="image/x-icon">
+    <style>
+        /* Styles for the popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(247, 247, 247);
+            border: 2px solid #2e2d2d;
+            padding: 40px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Exel Car Dealership Nakuru</h1>
+        <h2>New and Used Cars</h2>
+        <h3>Contact: 0706-813-108</h3>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="submit">Search Vehicle</button>
+        </form>
+    </header>
+    <main>
+        <!-- Car listings sections -->
+        <!-- Each section contains details about a car -->
+        <section id="car-listings">
+            <h2>Available Cars:</h2>
+            <div class="car">
+                <div class="car-images">
+                    <img src="Images/WhatsApp Image 2024-03-12 at 11.55.35 (1).jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Unknown 2024-03-14 at 21.06.20/WhatsApp Image 2024-03-12 at 11.55.35 (1).jpeg', 0)">
+                    <img src="Images/WhatsApp Image 2024-03-12 at 11.55.34 (1).jpeg" alt="Car Image" onclick="openModal('', 1)">
+                    <img src="Images/WhatsApp Image 2024-03-12 at 11.55.34.jpeg" alt="Car Image" onclick="openModal('', 2)">
+                </div>
+                <div class="car-details-container">
+                    <h2>Car Details</h2>
+                    <div class="details-column">
+                        <p><strong>Car: Nissan X-Trail</strong></p>                    
+                        <p><strong>Year:</strong> 2011</p>
+                        <p><strong>Fuel:</strong> Petrol</p>
+                        <p><strong>Engine:</strong> 2.0L</p>
+                        <p><strong>Transmission:</strong> Automatic</p>
+                        <p><strong>Mileage:</strong> 184,542 Km</p>
+                    </div>
+                    <div class="details-column">
+                        <p><strong>Plate Number:</strong> KCT 494J</p>
+                        <p><strong>Price:</strong> 1,120,000 KES</p>
+                        <p><strong>Down Payment from:</strong> 219,999 KES</p>
+                        <p><strong>Monthly from:</strong> 51,284 KES</p>
+                    </div>
+                    <!-- Contact Button -->
+                    Click the link below to initiate a phone call:<br>
+                    <button onclick="showPopup('0706 813 108')"><a href="tel:+254706813108">Contact</a></button>
+                </div>
+            </div>
+        </section>
+
+         <section id="car-listings">
+                <div class="car">
+                    <div class="car-images">
+                        <img src="Images/WhatsApp Image 2022-10-12 at 4.45.34 PM (1).jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2022-10-12 at 4.45.34 PM (1).jpeg', 0)">
+                        <img src="Images/WhatsApp Image 2022-10-12 at 4.45.33 PM (1).jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2022-10-12 at 4.45.33 PM (1).jpeg', 1)">
+                        <img src="Images/WhatsApp Image 2022-10-12 at 4.45.30 PM (1).jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2022-10-12 at 4.45.30 PM (1).jpeg', 2)">
+                    </div>
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Honda Fit Shuttle</strong></p>                    
+                            <p><strong>Year:</strong> 2012</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 1.5L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong> 352,625 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KCV 968B</p>
+                            <p><strong>Price:</strong> 750,000 KES</p>
+                            <p><strong>Down Payment from:</strong> 149,999 KES</p>
+                            <p><strong>Monthly from:</strong> 34,966 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254706813108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="car-listings">
+                <div class="car">
+                    <div class="car-images">
+                        <img src="Images/WhatsApp Image 2024-03-12 at 11.56.17.jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2024-03-12 at 11.56.17.jpeg', 0)">
+                        <img src="Images/WhatsApp Image 2024-03-12 at 11.56.17 (2).jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2024-03-12 at 11.56.17 (2).jpeg', 1)">
+                        <img src="Images/WhatsApp Image 2024-03-12 at 11.56.17 (1).jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2024-03-12 at 11.56.17 (1).jpeg', 2)">
+                    </div>
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Subaru Legacy</strong></p>                    
+                            <p><strong>Year:</strong> 2013</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 2.5L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong> 121,478 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KDB 168M</p>
+                            <p><strong>Price:</strong> 1,320,000 KES</p>
+                            <p><strong>Down Payment from:</strong> 159,999 KES</p>
+                            <p><strong>Monthly from:</strong> 60,608 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254706813108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+        
+                <section class="car-details-side-by-side">
+                <div class="car">
+                    <img src="Images/Fielder4.jpeg" alt="Car Image" onclick="openModal('Images/Fielder4.jpeg', 3)">
+                    <img src="Images/Fielder3.jpeg" alt="Car Image" onclick="openModal('Images/Fielder3.jpeg', 4)">
+                    <img src="Images/Fielder1.jpeg" alt="Car Image" onclick="openModal('Images/Fielder1.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Toyota Fielder</strong></p>                     
+                            <p><strong>Year:</strong>2015 </p>
+                            <p><strong>Fuel:</strong>Petrol</p>
+                            <p><strong>Engine:</strong>1.5L</p>
+                            <p><strong>Transmission:</strong>Automatic</p>
+                            <p><strong>Mileage:</strong>130,892 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:KDE 459A</strong> </p>
+                            <p><strong>Price:</strong>1,070,000 KES</p>
+                            <p><strong>Down Payment from:</strong> 213,999 KES</p>
+                            <p><strong>Monthly from:</strong>49,885 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="car">
+                    <img src="Images/BMW.jpeg" alt="Car Image" onclick="openModal('Images/BMW.jpeg', 3)">
+                    <img src="Images/BMW1.jpeg" alt="Car Image" onclick="openModal('Images/BMW1.jpeg', 4)">
+                    <img src="Images/BMW2.jpeg" alt="Car Image" onclick="openModal('Images/BMW2.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: BMW 320</strong></p>                     
+                            <p><strong>Year:</strong>2012</p>
+                            <p><strong>Fuel:</strong>Petrol</p>
+                            <p><strong>Engine:</strong>2.4L</p>
+                            <p><strong>Transmission:</strong>Automatic</p>
+                            <p><strong>Mileage:</strong>141,861 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong>KCX 518B</p>
+                            <p><strong>Price:</strong>1,950,000 KES</p>
+                            <p><strong>Monthly from:</strong>110,727 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="car">
+                    <img src="Images/Honda1.jpeg" alt="Car Image" onclick="openModal('Images/Honda1.jpeg', 3)">
+                    <img src="Images/Honda2.jpeg" alt="Car Image" onclick="openModal('Images/Honda2.jpeg', 4)">
+                    <img src="Images/Honda3.jpeg" alt="Car Image" onclick="openModal('Images/Honda3.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Honda Fit</strong></p>                     
+                            <p><strong>Year:</strong> 2011</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 1.3L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong>168,690 KES</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KCP 407Z</p>
+                            <p><strong>Price:</strong> 650,000 KES</p>
+                            <p><strong>Monthly from:</strong> 27,973 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+    
+            <section>
+                <div class="car">
+                    <img src="Images/jeep.jpeg" alt="Car Image" onclick="openModal('Images/jeep.jpeg', 3)">
+                    <img src="Images/Jeep1.jpeg" alt="Car Image" onclick="openModal('Images/Jeep1.jpeg', 4)">
+                    <img src="Images/Jeep2.jpeg" alt="Car Image" onclick="openModal('Images/Jeep2.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Jeep Compas</strong></p>                     
+                            <p><strong>Year:</strong> 2013</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 2.0L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong>161,109 KES</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> </p>
+                            <p><strong>Price:</strong> 1,850,000 KES</p>
+                            <p><strong>Monthly from:</strong> 83,919 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="car">
+                    <img src="Images/Mazda.jpeg" alt="Car Image" onclick="openModal('Images/Mazda.jpeg', 3)">
+                    <img src="Images/Mazda1.jpeg" alt="Car Image" onclick="openModal('Images/Mazda1.jpeg', 4)">
+                    <img src="Images/Mazda2.jpeg" alt="Car Image" onclick="openModal('Images/Mazda2.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Mazda Axela</strong></p>                     
+                            <p><strong>Year:</strong> 2008</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 1.5L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong>244,305 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KCE 148B</p>
+                            <p><strong>Price:</strong> 720,000 KES</p>
+                            <p><strong>Down Payment from:</strong> 139,999 KES</p>
+                            <p><strong>Monthly from:</strong> 32,635 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="car">
+                    <img src="Images/E220.jpeg" alt="Car Image" onclick="openModal('Images/E220.jpeg', 3)">
+                    <img src="Images/E220.1.jpeg" alt="Car Image" onclick="openModal('Images/E220.1.jpeg', 4)">
+                    <img src="Images/E220.2.jpeg" alt="Car Image" onclick="openModal('Images/E220.2.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Mercedes-Benz E220</strong></p>                     
+                            <p><strong>Year:</strong> 2011</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 2.1L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong>167,910 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KCR 003M</p>
+                            <p><strong>Price:</strong> 1,530,000 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>  
+
+            <section>
+                <div class="car">
+                    <img src="Images/AXIO.2.jpeg" alt="Car Image" onclick="openModal('Images/AXIO.2.jpeg', 3)">
+                    <img src="Images/AXIO.1.jpeg" alt="Car Image" onclick="openModal('Images/AXIO.1.jpeg', 4)">
+                    <img src="Images/AXIO.jpeg" alt="Car Image" onclick="openModal('Images/AXIO.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Toyota Axio</strong></p>                     
+                            <p><strong>Year:</strong> 2010</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 1.5L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong>249,110 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KCP 289D</p>
+                            <p><strong>Price:</strong> 795,000 KES</p>
+                            <p><strong>Down Payment from:</strong> 157,999 KES</p>
+                            <p><strong>Monthly from:</strong> 36,831 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>  
+
+            <section>
+                <div class="car">
+                    <img src="Images/ALLION.1.jpeg" alt="Car Image" onclick="openModal('Images/ALLION.1.jpeg', 3)">
+                    <img src="Images/ALLION.2.jpeg" alt="Car Image" onclick="openModal('Images/ALLION.2.jpeg', 4)">
+                    <img src="Images/ALLION.jpeg" alt="Car Image" onclick="openModal('Images/ALLION.jpeg', 5)">
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Toyota Allion</strong></p>                     
+                            <p><strong>Year:</strong> 2010</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 1.5L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong>169,661 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KCM 239R</p>
+                            <p><strong>Price:</strong> 720,000 KES</p>
+                            <p><strong>Down Payment from:</strong> 139,999 KES</p>
+                            <p><strong>Monthly from:</strong> 32,635 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254 706 813 108">Contact</a></button>
+                    </div>
+                </div>
+            </section>  
+
+            <section id="car-listings">
+                <h2>Available Cars:</h2>
+                <div class="car">
+                    <div class="car-images">
+                        <img src="Images/WhatsApp Image 2024-03-12 at 11.55.33 (2).jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2024-03-12 at 11.55.33 (2).jpeg', 0)">
+                        <img src="Images/WhatsApp Image 2024-03-12 at 11.55.33.jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2024-03-12 at 11.55.33.jpeg', 1)">
+                        <img src="Images/WhatsApp Image 2024-03-12 at 11.55.32.jpeg" alt="Car Image" onclick="openModal('Images/WhatsApp Image 2024-03-12 at 11.55.32.jpeg', 2)">
+                    </div>
+                    <div class="car-details-container">
+                        <h2>Car Details</h2>
+                        <div class="details-column">
+                            <p><strong>Car: Subaru Legacy</strong></p>                    
+                            <p><strong>Year:</strong> 2008</p>
+                            <p><strong>Fuel:</strong> Petrol</p>
+                            <p><strong>Engine:</strong> 2.0L</p>
+                            <p><strong>Transmission:</strong> Automatic</p>
+                            <p><strong>Mileage:</strong> 321,222 Km</p>
+                        </div>
+                        <div class="details-column">
+                            <p><strong>Plate Number:</strong> KCC 939M</p>
+                            <p><strong>Price:</strong> 760,000 KES</p>
+                            <p><strong>Monthly from:</strong> 43,708 KES</p>
+                        </div>
+                        <!-- Contact Button -->
+                        Click the link below to initiate a phone call:<br>
+                        <button onclick="showPopup('0706 813 108')"><a href="tel:+254706813108">Contact</a></button>
+                    </div>
+                </div>
+            </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="" id="modalImg" class="modal-content">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </main>
+    <!-- Popup Notification -->
+    <div id="popup" class="popup">
+        <p>Call us at: <span id="contact-number"></span></p>
+    </div>
+    <footer>
+        <!-- Back to Top button -->
+        <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        <section>
+        <div id="footer">Contact Us: Tel +254 706 813 108
+        </div>
+        Exel Car Dealership-Nakuru<br>
+        &#169;2024 
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
